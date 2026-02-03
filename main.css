@@ -1,7 +1,82 @@
-body,
-html {
-  /* height:100%; */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  margin: 0px;
-  padding: 0px;
+#app {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.store-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.store-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.store-item p {
+  margin: 5px 0;
+  flex-grow: 1;
+}
+
+.store-item span {
+  display: inline-block;
+  width: calc(100% / 3);
+  text-align: center;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #f8f8f8;
+  padding: 15px 20px;
+  text-align: center;
+  border-top: 1px solid #ccc;
 }
