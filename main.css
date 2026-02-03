@@ -48,30 +48,29 @@ main {
 
 .store-item {
   display: flex;
-  flex-direction: column;
-  border: 1px solid #ccc;
+  flex-wrap: wrap;
+  border: 2px solid #ccc; /* add border here */
+  border-radius: 8px;    /* optional: rounded corners */
   padding: 10px;
-  height: 100%;
   box-sizing: border-box;
+  background-color: #fff; /* optional: white background */
 }
 
+.store-item span {
+  flex: 0 0 auto;   /* prevents stacking */
+  margin-right: 10px;
+}
+
+.store-item span:last-child {
+  margin-right: 0;
+}
+
+/* Image and paragraphs stay the same */
 .store-item img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   margin-bottom: 10px;
-}
-
-.store-item p {
-  margin: 5px 0;
-  flex-grow: 1;
-}
-
-.store-item span {
-  display: inline-block;
-  width: calc(100% / 3);
-  text-align: center;
-  font-weight: bold;
 }
 
 footer {
